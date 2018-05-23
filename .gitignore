@@ -1,0 +1,10 @@
+/node_modules/
+/dist/
+/.idea/
+/PSD/
+/SVG Icon/
+/.git/
+/app/css/
+/**/*.psd
+/**/Thumbs.db
+/**/*.DS_Store

@@ -1,0 +1,307 @@
+/*@import "reset" if need this */
+@import "normalize"
+@import "fonts"
+@import "libs"
+@import "vars"
+@import "_mixins/mixins"
+@import "smart-grid"
+
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	&:before, &:after
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	opacity: 1
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.heading
+	font-size: 35px
+	color: #545454
+	line-height: 1.2
+	font-weight: normal
+	letter-spacing: 2px
+.subheading
+	font-size: 15px
+	color: #4c4c4c
+	line-height: 1.5
+	font-weight: normal
+	letter-spacing: 1px
+	word-wrap: break-word
+
+
+.top-header
+	+wrapper
+	position: relative
+	max-width: 100%
+	height: 100%
+	-webkit-background-size: cover
+	background-size: cover
+	background-position: center
+
+.top-line
+	position: relative
+	top: 60px
+	width: 100%
+	height: 47px
+	z-index: 2
+
+.logo
+	float: left
+	position: relative
+	top: -5px
+	&__link
+		display: block
+		font-size: 32px
+		line-height: 1
+		color: $accent
+		font-family: Georgia, sans-serif
+		width: 200px
+		outline: none
+		&:hover
+			color: $accent
+			text-decoration: none
+	span
+		position: relative
+		display: inline-block
+		font-size: 16px
+		line-height: 1
+		top: -6px
+		color: #ffffff
+
+.top-nav
+	float: right
+	position: relative
+	&__list
+		list-style-type: none
+		margin: 0
+		padding: 0
+	&__item
+		display: inline-block
+	&__link
+		position: relative
+		display: block
+		padding: 0 20px
+		color: #ffffff
+		font-size: 15px
+		line-height: 47px
+		text-decoration: none
+		&::after
+			content: ''
+			position: absolute
+			top: calc(100% - 12px)
+			left: 20px
+			width: calc(100% - 40px)
+			height: 3px
+			background-color: $accent
+			opacity: 0
+			transition: opacity .25s ease-in-out
+		&:hover, &:focus
+			text-decoration: none
+			color: #f1cdb3
+			&::after
+				opacity: 1
+
+.main-hero
+	position: absolute
+	top: 0
+	display: flex
+	width: 100%
+	height: 100%
+	z-index: 1
+	&__inner
+		align-items: center
+		margin: auto 0
+		width: 36%
+	.heading
+		font-weight: normal
+		font-size: 44px
+		color: #ffffff
+		line-height: 1.4
+	.subheading
+		font-size: 15px
+		color: #cdcdcd
+		padding-right: 20px
+		margin-bottom: 40px
+
+.button
+	display: inline-block
+	height: 52px
+	line-height: 52px
+	font-size: 17px
+	vertical-align: top
+	color: #292929
+	text-align: center
+	background-color: #f1cdb3
+	padding-right: 44px
+	padding-left: 44px
+	border-radius: 30px
+	text-decoration: none
+	&:hover, &:active
+		text-decoration: none
+		color: #292929
+		background-color: #fddcc4
+
+// about
+
+.about
+	+wrapper
+	padding: 90px 0
+	background-color: #fafafa
+
+.wrapper
+	+row-flex
+
+.about-half-first
+	+col
+	+size(6)
+	text-align: center
+	&__img
+		-webkit-background-size: cover
+		background-size: cover
+		background-position: center
+
+.about-half-second
+	+col
+	+size(6)
+	.heading
+		margin-bottom: 30px
+	.subheading
+		line-height: 1.8
+
+// Pets
+
+.pets
+	position: relative
+	+wrapper
+	text-align: center
+	padding: 70px 0
+	background-color: #f6f6f6
+	.heading
+		margin-bottom: 65px
+	.wrapper
+		+row-flex
+		position: relative
+		justify-content: center
+
+.js-slick
+	margin-bottom: 65px
+	+col
+	+size(10)
+
+.card
+	min-height: 420px
+	&__inner
+		width: 270px
+		margin: 0 50px
+		padding-bottom: 30px
+		background-color: #fff
+	&__img
+		max-width: 100%
+		height: 270px
+		margin-bottom: 35px
+		-webkit-background-size: cover
+		background-size: cover
+		background-repeat: no-repeat
+		background-position: center
+	&__button
+		position: relative
+		background-color: #fff
+		border: 2px solid $accent
+		line-height: 48px
+	.heading
+		font-weight: 300
+		margin-bottom: 20px
+
+.slick-prev, .slick-next
+	width: 50px
+	height: 50px
+	border-radius: 50%
+	border: 2px solid $accent
+	background-color: #ffffff
+	transition: background-color .25s
+	&::before
+		color: #000
+	&:hover
+		background-color: $accent
+
+// help
+
+
+.help
+	+wrapper
+	+clearfix
+	text-align: center
+	padding: 65px 0
+	.heading
+		margin-bottom: 65px
+
+.icon, .icon-second
+	margin: 0
+	padding: 0
+	list-style-type: none
+	display: flex
+	flex-wrap: nowrap
+	justify-content: space-between
+	margin-bottom: 65px
+	&__item
+		display: inline-block
+	&__link
+		display: block
+		width: 170px
+		height: 120px
+		text-decoration: none
+		text-align: center
+	&__img
+		width: 65px
+		margin: 0 auto 20px
+	span
+		color: #545454
+		font-size: 20px
+		line-height: 1.4
+
+.icon-second
+	justify-content: space-around
+	margin-bottom: 0
+
+@import "media" // Всегда в конце
