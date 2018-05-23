@@ -304,4 +304,103 @@ body
 	justify-content: space-around
 	margin-bottom: 0
 
+// donation
+
+.donation
+	+wrapper
+	padding: 65px 0
+	background-color: #f6f6f6
+	&__wrap
+		+row-flex
+	&__part1
+		+col
+		+size(6)
+	&__part2
+		+col
+		+size(4)
+
+.account
+	.heading
+		margin-bottom: 25px
+	.subheading
+		display: block
+		margin-bottom: 10px
+	&__button
+		position: relative
+		font-size: 20px
+		color: #292929
+		margin-bottom: 30px
+		border-radius: 5px
+		.account__button--icon
+			position: absolute
+			top: 12px
+			left: 8px
+			z-index: 5
+			max-width: 30px
+			width: 30px
+			height: 30px
+			-webkit-background-size: cover
+			background-size: cover
+			background-position: center
+	&__text
+		font-size: 12px
+		font-style: italic
+		color: #b2b2b2
+
+// footer
+
+.main-footer
+	-webkit-background-size: cover
+	background-size: cover
+	background-position: center
+	min-height: 360px
+	&__wrap
+		+wrapper
+		padding: 65px 0
+	&__row
+		+row-flex
+
+.question, .visit
+	+col
+	+size(4)
+	list-style-type: none
+	margin: 0
+	padding: 0
+	&__item
+		width: 100%
+		display: block
+		position: relative
+		margin-bottom: 30px
+		+clearfix
+		.heading
+			color: #ffffff
+			margin-bottom: 40px
+	&__icon
+		position: relative
+		top: 4px
+		width: 40px
+		height: 32px
+		display: inline-block
+		margin-right: 20px
+		-webkit-background-size: cover
+		background-size: cover
+		background-position: center
+	&__link
+		font-size: 20px
+		color: #f1cdb3
+		text-decoration: none
+		&:hover
+			color: darken(#f1cdb3, 15)
+
+.visit
+	+shift-left(1)
+	&__icon
+		display: inline-block
+		top: 8px
+		height: 40px
+		float: left
+		clear: both
+
+
+
 @import "media" // Всегда в конце
