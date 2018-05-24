@@ -142,6 +142,15 @@ body
 			&::after
 				opacity: 1
 
+.mobile-menu
+	display: none
+	-webkit-background-size: cover
+	background-size: cover
+	background-position: center
+	width: 40px
+	height: 40px
+	margin-right: 20px
+
 .main-hero
 	position: absolute
 	top: 0
@@ -195,6 +204,7 @@ body
 .about-half-first
 	+col
 	+size(6)
+	+size-sm(12)
 	text-align: center
 	&__img
 		-webkit-background-size: cover
@@ -204,6 +214,7 @@ body
 .about-half-second
 	+col
 	+size(6)
+	+size-sm(12)
 	.heading
 		margin-bottom: 30px
 	.subheading
@@ -227,7 +238,10 @@ body
 .js-slick
 	margin-bottom: 65px
 	+col
-	+size(10)
+	+size(11)
+	+size-md(10)
+	+size-sm(10)
+	+size-xxs(12)
 
 .card
 	min-height: 420px
@@ -267,7 +281,6 @@ body
 
 // help
 
-
 .help
 	+wrapper
 	+clearfix
@@ -281,11 +294,12 @@ body
 	padding: 0
 	list-style-type: none
 	display: flex
-	flex-wrap: nowrap
+	flex-wrap: wrap
 	justify-content: space-between
-	margin-bottom: 65px
+	margin-bottom: 35px
 	&__item
 		display: inline-block
+		margin-bottom: 30px
 	&__link
 		display: block
 		width: 170px
@@ -315,9 +329,19 @@ body
 	&__part1
 		+col
 		+size(6)
+		+size-md(6)
+		+size-sm(12)
 	&__part2
 		+col
-		+size(4)
+		+size(5)
+		+size-md(6)
+		+size-sm(12)
+
+.part1__img
+	-webkit-background-size: cover
+	background-size: cover
+	background-position: center
+	margin: 0 auto
 
 .account
 	.heading
@@ -331,6 +355,7 @@ body
 		color: #292929
 		margin-bottom: 30px
 		border-radius: 5px
+		padding-right: 5px
 		.account__button--icon
 			position: absolute
 			top: 12px
@@ -346,6 +371,8 @@ body
 		font-size: 12px
 		font-style: italic
 		color: #b2b2b2
+		max-width: 500px
+		margin: 0 auto
 
 // footer
 
@@ -354,15 +381,18 @@ body
 	background-size: cover
 	background-position: center
 	min-height: 360px
+	padding: 65px 0
 	&__wrap
 		+wrapper
-		padding: 65px 0
 	&__row
 		+row-flex
+		+col
 
 .question, .visit
 	+col
 	+size(4)
+	+size-md(6)
+	+size-xs(12)
 	list-style-type: none
 	margin: 0
 	padding: 0
@@ -394,6 +424,9 @@ body
 
 .visit
 	+shift-left(1)
+	+shift-md-left(1)
+	+shift-sm-left(0)
+	+shift-xs-left(0)
 	&__icon
 		display: inline-block
 		top: 8px
@@ -401,6 +434,94 @@ body
 		float: left
 		clear: both
 
++to(1200px)
+	.slick-next
+		transform: translateX(-90%)
+	.slick-prev
+		transform: translateX(90%)
+
++to(1000px)
+	.main-hero__inner
+		width: 50%
+	.slick-next
+		transform: translateX(-90%)
+	.slick-prev
+		transform: translateX(90%)
+	.icon, .icon-second
+		justify-content: space-around
+	.visit
+		+shift-left(0)
+
++to(750px)
+	.main-hero__inner
+		width: 70%
+	.top-line
+		height: auto
+	.top-nav__list
+		display: none
+	.mobile-menu
+		display: block
+	.about-half-second
+		text-align: center
+		margin-top: 20px
+	.donation
+		text-align: center
+	.account
+		margin-top: 20px
+		.heading
+			font-size: 30px
+	.question, .visit
+		.heading
+			font-size: 25px
+		&__link
+			font-size: 15px
+		&__icon
+			width: 28px
+			height: 28px
+	.card
+		&__inner
+			margin: 0 10px
+
++to(620px)
+	.card
+		&__inner
+			width: 340px
+		&__img
+			height: 370px
+
++to(550px)
+	.main-footer__row
+		.question, .visit
+			margin-left: 15px !important
+	.icon
+		margin-bottom: 0
+	.icon-second
+		display: none
+
++to(500px)
+	.main-hero__inner
+		width: 100%
+		.heading
+			font-size: 35px
+			margin-bottom: 15px
+	.heading
+		font-size: 25px
+
++to(440px)
+	.card
+		&__inner
+			width: 270px
+		&__img
+			height: 270px
+	.mobile-menu
+		width: 30px
+		height: 30px
+
++to(380px)
+	.main-hero__inner
+		text-align: center
+	.slick-prev, .slick-next, .slick-arrow
+		display: none!important
 
 
 @import "media" // Всегда в конце

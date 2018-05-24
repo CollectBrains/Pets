@@ -13,19 +13,20 @@ $(function() {
 		variableWidth: true,
 		responsive: [
 			{
-				breakpoint: 1024,
+				breakpoint: 1000,
 				settings: {
-					slidesToShow: 3,
-					slidesToScroll: 3,
+					slidesToShow: 2,
+					slidesToScroll: 1,
+					centerMode: false,
 					infinite: true,
 					dots: false
 				}
 			},
 			{
-				breakpoint: 600,
+				breakpoint: 620,
 				settings: {
-					slidesToShow: 2,
-					slidesToScroll: 2
+					slidesToShow: 1,
+					slidesToScroll: 1
 				}
 			},
 			{
