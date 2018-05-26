@@ -1,7 +1,8 @@
 $(function() {
 
 	$('.top-nav').after('<div class="mobile-menu__overlay">');
-	$('.top-nav__list').addClass('overlay').clone().appendTo('.mobile-menu__overlay');
+	$('.top-nav__list').clone().appendTo('.mobile-menu__overlay');
+	$('.mobile-menu__overlay .top-nav__list').addClass('overlay');
 	$('.mobile-wrap').on("click", function() {
 		$("body").toggleClass('mobile-scroll');
 		$('.mobile-menu__overlay > .top-nav__list, .overlay').stop().slideToggle();

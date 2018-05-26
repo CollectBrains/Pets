@@ -87,13 +87,15 @@ body
 	top: 60px
 	width: 100%
 	height: 47px
-	//z-index: 5
+	//z-index: 4
 
 .logo
 	float: left
 	position: relative
 	top: -5px
+	z-index: 1
 	&__link
+		position: relative
 		display: block
 		font-size: 32px
 		line-height: 1
@@ -101,6 +103,7 @@ body
 		font-family: Georgia, sans-serif
 		width: 200px
 		outline: none
+		z-index: 1
 		&:hover
 			color: $accent
 			text-decoration: none
@@ -116,9 +119,11 @@ body
 	float: right
 	position: relative
 	&__list
+		position: relative
 		list-style-type: none
 		margin: 0
 		padding: 0
+		z-index: 5
 	&__item
 		display: inline-block
 	&__link
@@ -189,9 +194,6 @@ body
 				.top-nav__link
 					display: inline-block
 					font-size: 18px
-
-
-
 
 .main-hero
 	position: absolute
@@ -561,6 +563,10 @@ body
 			width: 270px
 		&__img
 			height: 270px
+	.mobile-menu
+		&__overlay
+			.top-nav__list.overlay
+				margin-top: 35vw
 
 +to(380px)
 	.main-hero__inner
