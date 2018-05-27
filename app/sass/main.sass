@@ -288,7 +288,9 @@ body
 	+size-xxs(12)
 
 .card
+	position: relative
 	min-height: 420px
+	box-shadow: 0 2px 20px rgba(#fff, .6)
 	&__inner
 		width: 270px
 		margin: 0 50px
@@ -310,6 +312,7 @@ body
 	.heading
 		font-weight: 300
 		margin-bottom: 20px
+
 
 .slick-prev, .slick-next
 	width: 50px
@@ -350,6 +353,9 @@ body
 		height: 120px
 		text-decoration: none
 		text-align: center
+		&:hover
+			span
+				color: darken($accent, 30)
 	&__img
 		width: 65px
 		margin: 0 auto 20px
@@ -357,6 +363,7 @@ body
 		color: #545454
 		font-size: 20px
 		line-height: 1.4
+		transition: color .25s linear
 
 .icon-second
 	justify-content: space-around
@@ -477,6 +484,63 @@ body
 		height: 40px
 		float: left
 		clear: both
+
+// modal
+
+.d-none
+	display: none
+
+.modal
+	width: calc(100% - 20px)
+	height: calc(100% - 20px)
+	max-width: 800px
+	max-height: 470px
+	min-width: 280px
+	position: relative
+	background-color: #fff
+
+.modal-1
+	width: 50%
+	height: auto
+	float: left
+	> div
+		-webkit-background-size: cover
+		background-size: cover
+		background-position: center
+		width: 100%
+		height: 380px
+
+.modal-2
+	width: 50%
+	height: auto
+	float: right
+	h4
+		font-size: 35px
+		color: #545454
+		line-height: 1
+		font-weight: 300
+	>	span
+			font-size: 20px
+			display: block
+			color: #545454
+			margin-bottom: 6px
+	p
+		font-size: 15px
+		color: #4c4c4c
+		margin-bottom: 20px
+	ul, li
+		list-style: none
+		margin: 0
+		padding: 0
+	li
+		display: block
+		font-size: 15px
+		color: #545454
+		span
+			font-size: 17px
+			color: #545454
+			font-weight: 600
+
 
 +to(1200px)
 	.slick-next

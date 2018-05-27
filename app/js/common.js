@@ -1,5 +1,9 @@
 $(function() {
 
+	// $('[data-fancybox="modal"]').fancybox({
+	// 	// Options will go here
+	// });
+
 	$('.top-nav').after('<div class="mobile-menu__overlay">');
 	$('.top-nav__list').clone().appendTo('.mobile-menu__overlay');
 	$('.mobile-menu__overlay .top-nav__list').addClass('overlay');
